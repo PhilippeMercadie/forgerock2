@@ -8,8 +8,8 @@ WORKDIR $CATALINA_HOME
 
 VOLUME /opt/openam/conf
 
-RUN chown -R 1001:1001 /opt/openam/conf
-	&& chmod -R 777 /opt/openam/conf/* 
+RUN chown -R 1001:1001 /opt/openam/conf \
+    && chmod -R 777 /opt/openam/conf/* 
 
 # download openam nightly build war
 # Trick taken from wadahiro/docker-openam-nightly!
