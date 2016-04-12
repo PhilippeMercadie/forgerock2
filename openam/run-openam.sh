@@ -5,9 +5,8 @@
 #  Point instance dir at /root/openam
 mkdir -p /root/.openamcfg
 cat >/root/.openamcfg/AMConfig_usr_local_tomcat_webapps_openam_ <<HERE
-/root/openam
+/opt/openam/conf
 HERE
-
 
 cd /usr/local/tomcat 
 bin/catalina.sh run 
