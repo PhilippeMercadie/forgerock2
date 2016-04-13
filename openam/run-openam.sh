@@ -3,8 +3,8 @@
 # To create a persistent configuration mount a data volume on /openam/root
 
 #  Point instance dir at /root/openam
-mkdir -p /root/.openamcfg
-cat >/root/.openamcfg/AMConfig_usr_local_tomcat_webapps_openam_ <<HERE
+mkdir -p /1001/.openamcfg
+cat >/1001/.openamcfg/AMConfig_usr_local_tomcat_webapps_openam_ <<HERE
 /opt/openam/conf
 HERE
 
