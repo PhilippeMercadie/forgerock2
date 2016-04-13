@@ -5,11 +5,12 @@ MAINTAINER warren.strange@gmail.com
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 WORKDIR $CATALINA_HOME
+RUN mkdir -p /opt/openam
+VOLUME /opt/openam
 
-VOLUME /opt/openam/conf
 
-RUN chown -R 1001:1001 /opt/openam/conf \
-    && chmod -R 777 /opt/openam/conf/* 
+RUN chown -R 1001:1001 /opt/openam \
+    && chmod -R 777 /opt/openam/* 
 
 # download openam nightly build war
 # Trick taken from wadahiro/docker-openam-nightly!
